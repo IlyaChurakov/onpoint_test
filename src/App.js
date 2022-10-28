@@ -1,49 +1,59 @@
-import react, {createRef} from 'react'
+import react, {createRef, useEffect, useState} from 'react'
 import './App.css';
 
 function App() {
 
-	const tape = createRef('tape')
-	const scrollbar = createRef('scrollbar')
-	const content = createRef('content')
-	const container = createRef('container')
+	const tape = createRef('tape'),
+		firstSlide = createRef('firstSlide'),
+		slider = createRef('slider')
 
-	let offset = 0
+	const [touchPosition, setTouchPosition] = useState(null)
+	const [offset, setOffset] = useState(0)
+	// const [direction, setDirection] = useState(null)
 
-	const actionLeftBtn = () => {
+	const onTouchStart = (e) => {
+		const touchDown = e.touches[0].clientX; // Координата X на которой нажали
+	
+		setTouchPosition(touchDown);
+	}
 
-		if (offset !== 0) {
-			offset += 20
-			tape.current.style = `transform: translateX(${offset}%)`
+	const onTouchMove = (e) => {
+		if (touchPosition === null) {
+		  	return;
 		}
-		console.log(offset)
-	}
+	
+		const currentPosition = e.touches[0].clientX;
+		const direction = touchPosition - currentPosition;
 
-	const actionRightBtn = () => {
-		if (offset !== -80) {
-			offset -= 20
-			tape.current.style = `transform: translateX(${offset}%)`
+		let offs = offset
+
+		if (direction > 10) { // Следующий слайд
+			if (offset - slider.current.offsetWidth >= -4096) {
+				offs = offset - slider.current.offsetWidth
+				tape.current.style = `transform: translateX(${offs}px)`
+				setOffset(offs)
+				console.log(offs)
+			}
+		} 
+		if (direction < -10) { // Предыдущий слайд
+			if (offset + slider.current.offsetWidth <= 0) {
+				offs = offset + slider.current.offsetWidth
+				tape.current.style = `transform: translateX(${offs}px)`
+				setOffset(offs)
+				console.log(offs)
+			}
 		}
-		console.log(offset)
-	}
 
-	const takeScrollbar = () => {
-		scrollbar.current.style.top = `${test++}px`
-	}
-	const moveScrollbar = () => {
-		scrollbar.current.style.top = `${test + 10}px`
-	}
-	const takeoffScrollbar = () => {
-		// scrollbar.
+		setTouchPosition(null);
 	}
 
 	return (
-		<div className="wrapper">
-			<button className="leftBtn" onClick={actionLeftBtn}>{'<'}</button>
-			<button className="rightBtn" onClick={actionRightBtn}>{'>'}</button>
-			<div className="slideTape" ref={tape}>
+		<div className="wrapper" ref={slider} onTouchStart={onTouchStart} onTouchMove={onTouchMove}>
+			{/* <button className="leftBtn" onClick={actionLeftBtn}>{'<'}</button>
+			<button className="rightBtn" onClick={actionRightBtn}>{'>'}</button> */}
+			<div className="slideTape" ref={tape} style={{transform: 'translateX(${offset}%)', transition: '1s all'}}>
 
-				<div className="slide slide-1">
+				<div className="slide slide-1" ref={firstSlide}>
 					<div className='header'>
 						<img className='header-btn' src="./icons/global/main.png" alt="header" />
 						<div className='header-line'/>
@@ -55,7 +65,11 @@ function App() {
 					</div>
 					<button className='btn'>
 						<div className='btn-arrow'>
-
+							<div className='arrow'>
+								<div className='arrow-line1'></div>
+								<div className='arrow-line2'></div>
+								<div className='arrow-line3'></div>
+							</div>
 						</div>
 						<div className='btn-text'>Что дальше?</div>
 					</button>
@@ -77,7 +91,7 @@ function App() {
 						<div className='header-text'>PROJECT</div>
 					</div>
 					<div className='hello-text'>ТЕКСТ <br/> СООБЩЕНИЯ</div>
-					<div className='textfield' ref={content}>
+					<div className='textfield'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris semper rhoncus orci quis posuere. Phasellus ultricies neque odio, a tempus ipsum congue id. Vivamus a ante tincidunt, molestie augue et, pellentesque magna. Vivamus elementum urna rutrum, viverra turpis vitae, rhoncus magna. Quisque faucibus sem nec lorem maximus molestie sit amet eget nisl. Integer luctus eget nibh nec blandit. Pellentesque pretium ligula vitae augue dictum, eget lobortis lectus feugiat. Morbi commodo orci at dui egestas euismod. Sed faucibus libero eu est tincidunt, id semper tortor faucibus. Nam a lectus urna. Curabitur lacus nibh, mollis quis vestibulum at, venenatis sit amet neque. In nec est nec est volutpat facilisis. Integer vitae velit tellus. Vivamus egestas pellentesque leo, id pharetra nisi blandit ut. Suspendisse magna mauris, eleifend in gravida vitae, lobortis sit amet nulla. Nullam eget facilisis felis.
 					</div>
 					<img className='sperm' src='./icons/slide2/sperm1.png' style={{position: 'absolute', width: 656, top: 97, right: 0}}/>
@@ -86,8 +100,8 @@ function App() {
 					<img src='./icons/slide2/sperm4.png' style={{position: 'absolute', width: 134, top: 413, right: 0}}/>
 					<img src='./icons/slide2/sperm5.png' style={{position: 'absolute', width: 136, top: 517, right: 0}}/>
 
-					<div id="scrollbar-container" ref={container}>
-						<div id="scrollbar"ref={scrollbar} onMouseDown={takeScrollbar} onMouseMove={moveScrollbar} onMouseUp={takeoffScrollbar}></div>
+					<div id="scrollbar-container">
+						<div id="scrollbar"></div>
 					</div>
 
 				</div>
@@ -113,9 +127,12 @@ function App() {
 								A arcu curvus vitae
 							</div>
 							<button className='pinkBtn'>
-								<button className='blackBtn-in'>
-
-								</button>
+								<div className='blackBtn-in'>
+									<div className='plus'>
+										<div className='plus-line1'></div>
+										<div className='plus-line2'></div>
+									</div>
+								</div>
 								<div className='btn-text'>Подробнее</div>
 							</button>
 						</div>

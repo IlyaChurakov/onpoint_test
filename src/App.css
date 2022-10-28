@@ -233,6 +233,40 @@ html, body {
 	box-shadow: 0 0 50px rgb(0 0 0 / 10%);
 }
 
+.plus-line1 {
+	width: 13px;
+	height: 2px;
+	background: white;
+	transform: translate(12px, 6.5px);
+}
+.plus-line2 {
+	width: 2px;
+	height: 13px;
+	background: white;
+	transform: translate(17.5px, -0.5px);
+}
+
+.arrow-line1 {
+	width: 10px;
+	height: 2px;
+	background: white;
+	transform: rotate(45deg) translate(30.5px, -4.5px);
+	border-radius: 1px;
+}
+.arrow-line2 {
+	width: 20px;
+	height: 2px;
+	background: white;
+	transform: translate(14px, 20.5px);
+	border-radius: 1px;
+}
+.arrow-line3 {
+	width: 10px;
+	height: 2px;
+	background: white;
+	transform: rotate(-45deg) translate(2px, 32.5px);
+	border-radius: 1px;
+}
 #plate {
 	position: absolute;
 	width: 66px;
