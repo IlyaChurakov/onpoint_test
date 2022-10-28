@@ -1,9 +1,11 @@
+@import url("./fonts/stylesheet.css");
+
 html, body {
   	margin: 0;
 }
 
 * {
-	font-family: Gilroy, sans-serif;
+	font-family: 'Gilroy-Thin';
 }
 
 .wrapper {
@@ -85,6 +87,7 @@ html, body {
 }
 .header-btn {
 	height: 19px;
+	transform: translateY(-2px);
 }
 .header-line {
 	height: 25px;
@@ -92,22 +95,47 @@ html, body {
 	background: #000;
 	margin: 0 25px;
 }
+.header-text {
+	font-family: 'DINPro';
+	font-size: 19px;
+	letter-spacing: 2px;
+	line-height: 21px;
+}
 .text {
 	display: block;
 	font-size: 107px;
+	font-weight: 600;
 	width: 900px;
 	margin-left: 67px;
 	margin-top: 5px;
+	letter-spacing: 6px;
+	line-height: 120px;
 }
-.text span {
+.text #task {
 	position: relative;
 	z-index: 10;
 }
-.hello-text {
+.text #no {
+	font-family: 'Gilroy-Extrabold';
+}
+.slide-2 .hello-text {
+	font-family: 'DINPro';
 	display: block;
 	margin-top: 115px;
-	margin-left: 67px;
-	font-size: 26px;
+	margin-left: 69px;
+	font-size: 27px;
+    line-height: 32px;
+	letter-spacing: 2px;
+	transform: translateY(-34px);
+}
+.hello-text {
+	font-family: 'DINPro';
+	display: block;
+	margin-top: 115px;
+	margin-left: 69px;
+	font-size: 27px;
+    line-height: 32px;
+	letter-spacing: 2px;
 }
 .btn {
 	position: absolute;
@@ -128,15 +156,20 @@ html, body {
 	background: #000;
 	margin-left: 20px;
 	margin-right: 20px;
+	box-shadow: 0px -2px 2px 2px rgb(20 20 20 / 35%), 1px 1px 2px 2px rgb(255 255 255 / 44%);
 }
 .btn-text {
-	font-size: 20px;
+	font-family: 'DINPro';
+	font-size: 25px;
+	letter-spacing: 2px;
 }
 
 .textfield {
+	font-family: 'DINPro';
 	width: 775px;
 	height: 445px;
 	padding: 33px;
+	padding-right: 53px;
 	background: #fff;
 	border: none;
 	border-radius: 20px;
@@ -144,10 +177,14 @@ html, body {
 	margin-top: 10px;
 	overflow-y: scroll;
 	box-sizing: border-box;
-	font-size: 25px;
+	font-size: 22px;
 	z-index: 10;
 	position: relative;
 	box-shadow: 0 0 50px rgb(0 0 0 / 10%);
+}
+.textfield span {
+	font-family: 'DINPro';
+	font-weight: 600;
 }
 .board {
 	width: 825px;
@@ -162,11 +199,32 @@ html, body {
 	position: relative;
 }
 .board-subtitle {
-	font-size: 25px;
+	font-family: 'DINPro';
+	font-size: 26px;
+	margin-left: 6px;
 }
 .board-title {
-	font-size: 90px;
+	font-family: 'Gilroy';
+	font-size: 97px;
+	line-height: 119px;
+	letter-spacing: 7px;
 }
+.board-title span {
+	font-family: 'Gilroy-Extrabold';
+	font-size: 97px;
+	line-height: 119px;
+}
+.numbers {
+	font-family: 'Gilroy-Extrabold';
+	color: #8cc9e8;
+	font-weight: 700;
+	margin-bottom: 10px;
+	margin-top: 21px;
+}
+.txt {
+	font-family: 'DINPro';
+}
+
 .board-transparent {
 	width: 825px;
 	height: 575px;
@@ -179,10 +237,21 @@ html, body {
 	position: relative;
 }
 .board-transparent-subtitle {
-	font-size: 25px;
+	font-family: 'DINPro';
+	font-size: 26px;
+	margin-left: 6px;
 }
 .board-transparent-title {
-	font-size: 90px;
+	font-family: 'Gilroy';
+	font-size: 97px;
+	line-height: 119px;
+	letter-spacing: 7px;
+}
+.board-transparent-title span {
+	font-family: 'Gilroy-Extrabold';
+	font-size: 97px;
+	line-height: 119px;
+	
 }
 .board ul {
 	transform: translateX(-40px);
@@ -192,14 +261,9 @@ html, body {
 	list-style-type: none;
 	font-size: 26px;
 	line-height: 26px;
-	width: 450px;
+	width: 500px;
 }
-.numbers {
-	color: #8cc9e8;
-	font-weight: 700;
-	margin-bottom: 16px;
-	margin-top: 27px;
-}
+
 
 .board-group {
 	margin-top: 90px;
@@ -212,9 +276,10 @@ html, body {
 }
 
 .big-board-in {
-	padding: 50px;
+	font-family: 'DINPro';
+	padding: 47px 50px;
 	padding-left: 130px;
-	font-size: 20px;
+	font-size: 24px;
 	box-sizing: border-box;
 	width: 413px;
 	height: 266px;
@@ -223,9 +288,10 @@ html, body {
 	box-shadow: 0 0 50px rgb(0 0 0 / 10%);
 }
 .small-board-in {
-	padding: 50px 0 0 40px;
+	font-family: 'DINPro';
+	padding: 47px 86px 0 40px;
 	box-sizing: border-box;
-	font-size: 20px;
+	font-size: 24px;
 	width: 266px;
 	height: 150px;
 	background: #fff;
@@ -233,17 +299,24 @@ html, body {
 	box-shadow: 0 0 50px rgb(0 0 0 / 10%);
 }
 
+.blackBtn-in {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px -2px 2px 2px rgb(20 20 20 / 35%), 1px 1px 2px 2px rgb(255 255 255 / 44%);
+}
+
 .plus-line1 {
 	width: 13px;
-	height: 2px;
+	height: 2.5px;
 	background: white;
-	transform: translate(12px, 6.5px);
+	transform: translate(1px, 7.5px);
 }
 .plus-line2 {
 	width: 2px;
 	height: 13px;
 	background: white;
-	transform: translate(17.5px, -0.5px);
+	transform: translate(6px, -0.5px);
 }
 
 .arrow-line1 {
@@ -309,7 +382,7 @@ html, body {
 }
 
 .btns-wrapper {
-	margin-top: 45px;
+	margin-top: 58px;
 	width: 90px;
 	height: 16px;
 	display: flex;
@@ -387,6 +460,7 @@ html, body {
 }
 #scrollbar-container {
 	position: absolute;
+	border-radius: 4px;
 	top: 237px;
 	left: 78px;
 	height: 445px;
@@ -397,12 +471,13 @@ html, body {
 #scrollbar {
 	position: absolute;
 	left: 50%;
-	transform: translateX(-50%);
-	top: 1px;
+	top: 0px;
 	height: 105px;
 	width: 21px;
 	border-radius: 10px;
 	background: rgb(255, 89, 169);
+	transform: translateX(-50%);
+	box-shadow: inset 4px 3px 2px 1px rgba(20, 20, 20, 0.36), inset 15px 4px 3px 0px rgba(12, 5, -1, 0.25);
 }
 
 ::-webkit-scrollbar {
