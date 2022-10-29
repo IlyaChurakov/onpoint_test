@@ -1,0 +1,152 @@
+.slide__2 {
+	position: relative;
+	background: url('../../public/icons/slide2/bg2.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.slide-2 .hello__text {
+	font-family: 'DINPro';
+	margin-top: 115px;
+	margin-left: 69px;
+	font-size: 27px;
+    line-height: 32px;
+	letter-spacing: 2px;
+	transform: translateY(-34px);
+}
+.textfield {
+	font-family: 'DINPro';
+	width: 775px;
+	height: 445px;
+	padding: 33px;
+	padding-right: 53px;
+	background: #fff;
+	border: none;
+	border-radius: 20px;
+	margin-left: 119px;
+	margin-top: 10px;
+	overflow-y: scroll;
+	box-sizing: border-box;
+	font-size: 22px;
+	z-index: 10;
+	position: relative;
+	box-shadow: 0 0 50px rgb(0 0 0 / 10%);
+}
+.textfield span {
+	font-family: 'DINPro';
+	font-weight: 600;
+}
+.board__group {
+	margin-top: 90px;
+	width: 720px;
+	height: 265px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	transform: translateX(-128px);
+}
+
+.big__board_in {
+	font-family: 'DINPro';
+	padding: 47px 50px;
+	padding-left: 130px;
+	font-size: 24px;
+	box-sizing: border-box;
+	width: 413px;
+	height: 266px;
+	background: #fff;
+	border-radius: 45px;
+	box-shadow: 0 0 50px rgb(0 0 0 / 10%);
+}
+.small__board_in {
+	font-family: 'DINPro';
+	padding: 47px 86px 0 40px;
+	box-sizing: border-box;
+	font-size: 24px;
+	width: 266px;
+	height: 150px;
+	background: #fff;
+	border-radius: 45px;
+	box-shadow: 0 0 50px rgb(0 0 0 / 10%);
+}
+.blackBtn__in {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px -2px 2px 2px rgb(20 20 20 / 35%), 1px 1px 2px 2px rgb(255 255 255 / 44%);
+}
+.plus__line1 {
+	width: 13px;
+	height: 2.5px;
+	background: white;
+	transform: translate(1px, 7.5px);
+}
+.plus__line2 {
+	width: 2px;
+	height: 13px;
+	background: white;
+	transform: translate(6px, -0.5px);
+}
+#plate {
+	position: absolute;
+	width: 66px;
+	top: -35px;
+	right: 524px;
+}
+#calendar {
+	position: absolute;
+	width: 69px;
+	top: -25px;
+	right: 159px;
+}
+.textfield::-webkit-scrollbar {
+	width: 8px;
+}
+.textfield::-webkit-scrollbar-track {
+	background: black;
+	width: 5px;
+	border-radius: 7px;
+}
+.textfield::-webkit-scrollbar-thumb {
+	background-color: rgb(255, 76, 243);
+	border-radius: 20px; 
+	width: 22px;
+	border: none;
+}
+#container {
+	width: 300px;
+	height: 300px;
+	box-sizing:border-box;
+	max-width:100%;
+	padding: 5px 10px;
+	margin: auto;
+	background: #ccc;
+	position: relative;
+}
+#content {
+	height:100%;
+	width: 100%;
+	overflow-y: scroll;
+}
+#scrollbar__container {
+	position: absolute;
+	border-radius: 4px;
+	top: 237px;
+	left: 78px;
+	height: 445px;
+	width: 8px;
+	background: #000000;
+}
+#scrollbar {
+	position: absolute;
+	left: 50%;
+	top: 0px;
+	height: 105px;
+	width: 21px;
+	border-radius: 10px;
+	background: rgb(255, 89, 169);
+	transform: translateX(-50%);
+	box-shadow: inset 4px 3px 2px 1px rgba(20, 20, 20, 0.36), inset 15px 4px 3px 0px rgba(12, 5, -1, 0.25);
+}
+::-webkit-scrollbar {
+	display: none;
+}

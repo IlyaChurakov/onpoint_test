@@ -1,0 +1,58 @@
+.slide__3 {
+	position: relative;
+	background: url('../../public/icons/slide3/bg3.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.board__transparent {
+	width: 825px;
+	height: 575px;
+	padding: 33px 0 0 215px;
+	border: none;
+	border-radius: 20px;
+	margin-left: 140px;
+	margin-top: 68px;
+	box-sizing: border-box;
+	position: relative;
+}
+.board__transparent_subtitle {
+	font-family: 'DINPro';
+	font-size: 26px;
+	margin-left: 6px;
+}
+.board__transparent_title {
+	font-family: 'Gilroy';
+	font-size: 97px;
+	line-height: 119px;
+	letter-spacing: 7px;
+}
+.board__transparent_title span {
+	font-family: 'Gilroy-Extrabold';
+	font-size: 97px;
+	line-height: 119px;
+}
+.pinkBtn {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 263px;
+	height: 81px;
+	border-radius: 50px;
+	border: none;
+	background: #fc6da9;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.btn__text {
+	font-size: 24px;
+}
+.blackBtn__in {
+	width: 50px;
+	height: 50px;
+	background: #000;
+	margin-left: 14px;
+	border-radius: 50%;
+	border: none;
+	margin-right: 20px;
+}

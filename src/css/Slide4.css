@@ -1,0 +1,98 @@
+.slide__4 {
+	position: relative;
+	background: url('../../public/icons/slide4/fone2.png') ;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.board {
+	width: 825px;
+	height: 575px;
+	padding: 33px 0 0 215px;
+	background: rgb(255, 255, 255);
+	border: none;
+	border-radius: 20px;
+	margin-left: 140px;
+	margin-top: 68px;
+	box-sizing: border-box;
+	position: relative;
+}
+.board__subtitle {
+	font-family: 'DINPro';
+	font-size: 26px;
+	margin-left: 6px;
+}
+.board__title {
+	font-family: 'Gilroy';
+	font-size: 97px;
+	line-height: 119px;
+	letter-spacing: 7px;
+}
+.board__title span {
+	font-family: 'Gilroy-Extrabold';
+	font-size: 97px;
+	line-height: 119px;
+}
+.numbers {
+	font-family: 'Gilroy-Extrabold';
+	color: #8cc9e8;
+	font-weight: 700;
+	margin-bottom: 10px;
+	margin-top: 21px;
+}
+.txt {
+	font-family: 'DINPro';
+}
+.board ul {
+	transform: translateX(-40px);
+	margin-top: 21px;
+}
+.board ul li {
+	list-style-type: none;
+	font-size: 26px;
+	line-height: 26px;
+	width: 500px;
+}
+.btns__wrapper {
+	margin-top: 58px;
+	width: 90px;
+	height: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.btns__wrapper img {
+	width: 10px;
+}
+.circle__pink {
+	height: 11px;
+	width: 11px;
+	border-radius: 50%;
+	background: #fc6da9;
+}
+.circle__empty {
+	height: 11px;
+	width: 11px;
+	border: 2px solid #000;
+	border-radius: 50%;
+	box-sizing: border-box;
+	background: #fff;
+}
+.board__close {
+	position: absolute;
+	top: 35px;
+	right: 35px;
+	width: 35px;
+	height: 35px;
+}
+.board__close_line1 {
+	height: 3px;
+	width: 49px;
+	background: #000;
+	transform: rotate(45deg) translate(7px, 16px);
+}
+.board__close_line2 {
+	height: 3px;
+	width: 49px;
+	background: #000;
+	transform: rotate(-45deg) translate(-14px, 4px);
+}

@@ -11,20 +11,20 @@
 #ball2 {
 	animation: ball2  15s infinite ease;
 }
-#sperm1 {
-	animation: sperm1  3s infinite ease;
+.sperm__anim1 {
+	animation: sperm1 3s ease;
 }
-#sperm2 {
-	animation: sperm2  3s infinite ease;
+.sperm__anim2 {
+	animation: sperm2  3s ease;
 }
-#sperm3 {
-	animation: sperm3  3s infinite ease;
+.sperm__anim3 {
+	animation: sperm3  3s ease;
 }
-#sperm4 {
-	animation: sperm4  3s infinite ease;
+.sperm__anim4 {
+	animation: sperm4  3s ease;
 }
-#sperm5 {
-	animation: sperm5  3s infinite ease;
+.sperm__anim5 {
+	animation: sperm5  3s ease;
 }
 .bubble1 {
 	animation: bubble1  15s infinite ease;
@@ -49,6 +49,18 @@
 }
 .bubble8 {
 	animation: bubble8  7s infinite ease;
+}
+.slide-anim {
+	animation: firstToSecond  2s ease;
+}
+
+@keyframes firstToSecond {
+	0% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(-1024px);
+	}
 }
 
 @keyframes hedgehog1 {
@@ -275,6 +287,7 @@
 		top: 155px;
 	}
 	17% {
+		transform: scale(1.1);
 		left: 188px;
 		top: 150px;
 	}
@@ -283,6 +296,7 @@
 		top: 155px;
 	}
 	51% {
+		transform: scale(1.1);
 		left: 178px;
 		top: 150px;
 	}
@@ -291,6 +305,7 @@
 		top: 155px;
 	}
 	85% {
+		transform: scale(1.1);
 		left: 178px;
 		top: 160px;
 	}
@@ -309,6 +324,7 @@
 		top: 207px;
 	}
 	34% {
+		transform: scale(1.1);
 		left: 82px;
 		top: 212px;
 	}
@@ -317,6 +333,7 @@
 		top: 207px;
 	}
 	68% {
+		transform: scale(1.1);
 		left: 82px;
 		top: 212px;
 	}
@@ -349,6 +366,7 @@
 		bottom: 284px;
 	}
 	50% {
+		transform: scale(1.1);
 		left: 20px;
 		bottom: 275px;
 	}
@@ -363,6 +381,7 @@
 		bottom: 140px;
 	}
 	50% {
+		transform: scale(1.1);
 		left: 15px;
 		bottom: 130px;
 	}
