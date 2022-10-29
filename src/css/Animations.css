@@ -1,0 +1,401 @@
+
+#hedgehog1 {
+	animation: hedgehog1  7s infinite ease;
+}
+#hedgehog2 {
+	animation: hedgehog2  15s infinite ease;
+}
+#ball1 {
+	animation: ball1  15s infinite ease;
+}
+#ball2 {
+	animation: ball2  15s infinite ease;
+}
+#sperm1 {
+	animation: sperm1  3s infinite ease;
+}
+#sperm2 {
+	animation: sperm2  3s infinite ease;
+}
+#sperm3 {
+	animation: sperm3  3s infinite ease;
+}
+#sperm4 {
+	animation: sperm4  3s infinite ease;
+}
+#sperm5 {
+	animation: sperm5  3s infinite ease;
+}
+.bubble1 {
+	animation: bubble1  15s infinite ease;
+}
+.bubble2 {
+	animation: bubble2  15s infinite ease;
+}
+.bubble3 {
+	animation: bubble3  15s infinite ease;
+}
+.bubble4 {
+	animation: bubble4  7s infinite ease;
+}
+.bubble5 {
+	animation: bubble5  7s infinite ease;
+}
+.bubble6 {
+	animation: bubble6  7s infinite ease;
+}
+.bubble7 {
+	animation: bubble7  7s infinite ease;
+}
+.bubble8 {
+	animation: bubble8  7s infinite ease;
+}
+
+@keyframes hedgehog1 {
+	0% {
+		top: 200px;
+		left: 863px;
+	}
+	50% {
+		top: 210px;
+		left: 873px;
+	}
+	100% {
+		top: 200px;
+		left: 863px;
+	}
+}
+@keyframes hedgehog2 {
+	0% {
+		transform: scale(1.0);
+		left: 544px;
+	}
+	14% {
+		transform: scale(1.1);
+		left: 534px;
+	}
+	28% {
+		transform: scale(1.0);
+		left: 540px;
+	}
+	42% {
+		transform: scale(1.1);
+		left: 547px;
+	}
+	56% {
+		transform: scale(1.0);
+		left: 550px;
+	}
+	70% {
+		transform: scale(1.1);
+		left: 553px;
+	}
+	84% {
+		transform: scale(1.1);
+		left: 547px;
+	}
+	100% {
+		transform: scale(1.0);
+		left: 544px;
+	}
+}
+@keyframes ball1 {
+	0% {
+		top: 500px;
+		left: 25px;
+	}
+	14% {
+		top: 525px;
+		left: 50px;
+	}
+	28% {
+		top: 540px;
+		left: 60px;
+	}
+	42% {
+		top: 530px;
+		left: 70px;
+	}
+	56% {
+		top: 520px;
+		left: 60px;
+	}
+	70% {
+		top: 500px;
+		left: 40px;
+	}
+	84% {
+		top: 480px;
+		left: 30px;
+	}
+	100% {
+		top: 500px;
+		left: 25px;
+	}
+}
+@keyframes ball2 {
+	0% {
+		top: 61px;
+		left: 745px;
+	}
+	14% {
+		top: 71px;
+		left: 755px;
+	}
+	28% {
+		top: 76px;
+		left: 735px;
+	}
+	42% {
+		top: 65px;
+		left: 725px;
+	}
+	56% {
+		top: 50px;
+		left: 730px;
+	}
+	70% {
+		top: 48px;
+		left: 750px;
+	}
+	77% {
+		top: 55px;
+		left: 760px;
+	}
+	84% {
+		top: 65px;
+		left: 765px;
+	}
+	93% {
+		top: 68px;
+		left: 758px;
+	}
+	100% {
+		top: 61px;
+		left: 745px;
+	}
+}
+@keyframes sperm1 {
+	0% {
+		opacity: 0;
+		top: 137px;
+		right: -40px;
+	}
+	100% {
+		opacity: 1;
+		top: 97px;
+		right: 0;
+	}
+}
+@keyframes sperm2 {
+	0% {
+		opacity: 0;
+		top: 117px;
+		right: -20px;
+	}
+	100% {
+		opacity: 1;
+		top: 97px;
+		right: 0;
+	}
+}
+@keyframes sperm3 {
+	0% {
+		opacity: 0;
+		top: 107px;
+		right: -10px;
+	}
+	100% {
+		opacity: 1;
+		top: 75px;
+		right: 0;
+	}
+}
+@keyframes sperm4 {
+	0% {
+		opacity: 0;
+		top: 423px;
+		right: -10px;
+	}
+	100% {
+		opacity: 1;
+		top: 413px;
+		right: 0;
+	}
+}
+@keyframes sperm5 {
+	0% {
+		opacity: 0;
+		top: 527px;
+		right: -10px;
+	}
+	100% {
+		opacity: 1;
+		top: 517px;
+		right: 0;
+	}
+}
+@keyframes bubble1 {
+	0% {
+		left: 197px;
+		top: 65px;
+	}
+	14% {
+		left: 203px;
+		top: 63px;
+	}
+	28% {
+		left: 203px;
+		top: 57px;
+	}
+	42% {
+		left: 197px;
+		top: 55px;
+	}
+	56% {
+		left: 195px;
+		top: 57px;
+	}
+	70% {
+		left: 195px;
+		top: 59px;
+	}
+	84% {
+		left: 197px;
+		top: 62px;
+	}
+	100% {
+		left: 197px;
+		top: 65px;
+	}
+}
+@keyframes bubble2 {
+	0% {
+		left: 183px;
+		top: 155px;
+	}
+	17% {
+		left: 188px;
+		top: 150px;
+	}
+	34% {
+		left: 183px;
+		top: 155px;
+	}
+	51% {
+		left: 178px;
+		top: 150px;
+	}
+	68% {
+		left: 183px;
+		top: 155px;
+	}
+	85% {
+		left: 178px;
+		top: 160px;
+	}
+	100% {
+		left: 183px;
+		top: 155px;
+	}
+}
+@keyframes bubble3 {
+	0% {
+		left: 82px;
+		top: 212px;
+	}
+	17% {
+		left: 87px;
+		top: 207px;
+	}
+	34% {
+		left: 82px;
+		top: 212px;
+	}
+	51% {
+		left: 77px;
+		top: 207px;
+	}
+	68% {
+		left: 82px;
+		top: 212px;
+	}
+	85% {
+		left: 77px;
+		top: 217px;
+	}
+	100% {
+		left: 82px;
+		top: 212px;
+	}
+}
+@keyframes bubble4 {
+	0% {
+		left: 197px;
+		top: 325px;
+	}
+	50% {
+		left: 207px;
+		top: 315px;
+	}
+	100% {
+		left: 197px;
+		top: 325px;
+	}
+}
+@keyframes bubble5 {
+	0% {
+		left: 10px;
+		bottom: 284px;
+	}
+	50% {
+		left: 20px;
+		bottom: 275px;
+	}
+	100% {
+		left: 10px;
+		bottom: 284px;
+	}
+}
+@keyframes bubble6 {
+	0% {
+		left: 25px;
+		bottom: 140px;
+	}
+	50% {
+		left: 15px;
+		bottom: 130px;
+	}
+	100% {
+		left: 25px;
+		bottom: 140px;
+	}
+}
+@keyframes bubble7 {
+	0% {
+		left: 250px;
+		bottom: 120px;
+	}
+	50% {
+		left: 240px;
+		bottom: 130px;
+	}
+	100% {
+		left: 250px;
+		bottom: 120px;
+	}
+}
+@keyframes bubble8 {
+	0% {
+		left: 188px;
+		bottom: 0px;
+	}
+	50% {
+		left: 188px;
+		bottom: -10px;
+	}
+	100% {
+		left: 188px;
+		bottom: 0px;
+	}
+}

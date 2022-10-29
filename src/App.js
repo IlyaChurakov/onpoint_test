@@ -1,5 +1,6 @@
 import react, {createRef, useEffect, useState} from 'react'
-import './App.css';
+import './css/App.css';
+import './css/Animations.css'
 
 /* 
 	Todo:
@@ -9,7 +10,7 @@ import './App.css';
 	сделано- Подключить шрифт
 	сделано - Детализировать верстку
 	- Написать комментарии к коду
-	- Анимации картинок
+	*осталось сделать запуск анимаций только при переходе на нужный слайд - Анимации картинок
 */
 
 function App() {
@@ -156,13 +157,13 @@ function App() {
 						<div className='btn-text'>Что дальше?</div>
 					</button>
 					<img src='./icons/slide1/sausage.png' style={{position: 'absolute', width: 125, top: 73, left: 0}}/>
-					<img src='./icons/slide1/hedgehog.png' style={{position: 'absolute', width: 105, top: 200, left: 863}}/>
-					<img src='./icons/slide1/hedgehog_down.png' style={{position: 'absolute', width: 225, bottom: 0, left: 544}}/>
+					<img id='hedgehog1' src='./icons/slide1/hedgehog.png' style={{position: 'absolute', width: 105, top: 200, left: 863}}/>
+					<img id='hedgehog2' src='./icons/slide1/hedgehog_down.png' style={{position: 'absolute', width: 225, bottom: 0, left: 544}}/>
 					<img src='./icons/slide1/sperm.png' style={{position: 'absolute', width: 505, top: 168, left: 438}}/>
 					<img src='./icons/slide1/ball_bg.png' style={{position: 'absolute', width: 67, top: 640, left: 372}}/>
-					<img src='./icons/slide1/ball1.png' style={{position: 'absolute', width: 69, top: 500, left: 25, zIndex: 0}}/>
+					<img id='ball1' src='./icons/slide1/ball1.png' style={{position: 'absolute', width: 69, top: 500, left: 25, zIndex: 0}}/>
 					<img src='./icons/slide1/sperm_bg.png' style={{position: 'absolute', width: 264, top: 612, left: 0}}/>
-					<img src='./icons/slide1/ball2.png' style={{position: 'absolute', width: 63, top: 61, left: 745}}/>
+					<img id='ball2' src='./icons/slide1/ball2.png' style={{position: 'absolute', width: 63, top: 61, left: 745}}/>
 					<img src='./icons/slide1/ball_2_bg.png' style={{position: 'absolute', width: 63, top: 37, left: 933}}/>
 					<img src="./icons/global/shape1.png" style={{position: 'absolute', width: 57, bottom: 13, left: 70}}/>
 				</div>
@@ -181,11 +182,12 @@ function App() {
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris semper rhoncus orci quis posuere. Phasellus ultricies neque odio, a tempus ipsum congue id. Vivamus a ante tincidunt, molestie augue et, pellentesque magna. Vivamus elementum urna rutrum, viverra turpis vitae, rhoncus magna. Quisque faucibus sem nec lorem maximus molestie sit amet eget nisl. Integer luctus eget nibh nec blandit. Pellentesque pretium ligula vitae augue dictum, eget lobortis lectus feugiat. Morbi commodo orci at dui egestas euismod. Sed faucibus libero eu est tincidunt, id semper tortor faucibus. Nam a lectus urna. Curabitur lacus nibh, mollis quis vestibulum at, venenatis sit amet neque. In nec est nec est volutpat facilisis. Integer vitae velit tellus. Vivamus egestas pellentesque leo, id pharetra nisi blandit ut. Suspendisse magna mauris, eleifend in gravida vitae, lobortis sit amet nulla. Nullam eget facilisis felis.
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris semper rhoncus orci quis posuere. Phasellus ultricies neque odio, a tempus ipsum congue id. Vivamus a ante tincidunt, molestie augue et, pellentesque magna. Vivamus elementum urna rutrum, viverra turpis vitae, rhoncus magna. Quisque faucibus sem nec lorem maximus molestie sit amet eget nisl. Integer luctus eget nibh nec blandit. Pellentesque pretium ligula vitae augue dictum, eget lobortis lectus feugiat. Morbi commodo orci at dui egestas euismod. Sed faucibus libero eu est tincidunt, id semper tortor faucibus. Nam a lectus urna. Curabitur lacus nibh, mollis quis vestibulum at, venenatis sit amet neque. In nec est nec est volutpat facilisis. Integer vitae velit tellus. Vivamus egestas pellentesque leo, id pharetra nisi blandit ut. Suspendisse magna mauris, eleifend in gravida vitae, lobortis sit amet nulla. Nullam eget facilisis felis.
 					</div>
-					<img className='sperm' src='./icons/slide2/sperm1.png' style={{position: 'absolute', width: 656, top: 97, right: 0}}/>
-					<img src='./icons/slide2/sperm2.png' style={{position: 'absolute', width: 440, top: 97, right: 0}}/>
-					<img src='./icons/slide2/sperm3.png' style={{position: 'absolute', width: 312, top: 75, right: 0}}/>
-					<img src='./icons/slide2/sperm4.png' style={{position: 'absolute', width: 134, top: 413, right: 0}}/>
-					<img src='./icons/slide2/sperm5.png' style={{position: 'absolute', width: 136, top: 517, right: 0}}/>
+					<img className='sperm1' id='sperm1' src='./icons/slide2/sperm1.png' style={{position: 'absolute', width: 656, top: 97, right: 0}}/>
+					<img id='sperm2' src='./icons/slide2/sperm2.png' style={{position: 'absolute', width: 440, top: 97, right: 0}}/>
+					<img id='sperm3' src='./icons/slide2/sperm3.png' style={{position: 'absolute', width: 312, top: 75, right: 0}}/>
+					<img id='sperm4' src='./icons/slide2/sperm4.png' style={{position: 'absolute', width: 134, top: 413, right: 0}}/>
+					<img id='sperm5' src='./icons/slide2/sperm5.png' style={{position: 'absolute', width: 136, top: 517, right: 0}}/>
+
 					<img src="./icons/global/shape1.png" style={{position: 'absolute', width: 57, bottom: 13, left: 70}}/>
 
 					<div id="scrollbar-container" ref={container} onTouchStart={onTouchStartScrollBar} onTouchMove={onTouchMoveScrollBar}>
@@ -226,7 +228,18 @@ function App() {
 						</div>
 					</div>
 
-					<img src='./icons/slide4/flakon.png' style={{position: 'absolute', width: 318, top: 65, left: 10}}/>
+					<img src='./icons/global/bottle.png' style={{position: 'absolute', width: 231, bottom: 0, left: 52, zIndex: 5}}/>
+
+					<img className='bubble1' src='./icons/global/bubble1.png' style={{position: 'absolute', width: 37, top: 65, left: 197, zIndex: 4}}/>
+					<img className='bubble2' src='./icons/global/bubble2.png' style={{position: 'absolute', width: 67, top: 155, left: 183, zIndex: 6}}/>
+					<img className='bubble3' src='./icons/global/bubble3.png' style={{position: 'absolute', width: 32, top: 212, left: 82, zIndex: 4}}/>
+					<img className='bubble4' src='./icons/global/bubble4.png' style={{position: 'absolute', width: 105, top: 325, left: 197, zIndex: 4}}/>
+					<img className='bubble5' src='./icons/global/bubble5.png' style={{position: 'absolute', width: 30, bottom: 284, left: 10, zIndex: 6}}/>
+					<img className='bubble6' src='./icons/global/bubble6.png' style={{position: 'absolute', width: 75, bottom: 140, left: 25, zIndex: 6}}/>
+					<img className='bubble7' src='./icons/global/bubble7.png' style={{position: 'absolute', width: 54, bottom: 120, left: 250, zIndex: 4}}/>
+					<img className='bubble8' src='./icons/global/bubble8.png' style={{position: 'absolute', width: 139, bottom: 0, left: 188, zIndex: 6}}/>
+					
+
 					<img src="./icons/global/shape1.png" style={{position: 'absolute', width: 57, bottom: 13, left: 70}}/>
 				</div>
 
@@ -260,7 +273,17 @@ function App() {
 						</div>
 					</div>
 
-					<img src='./icons/slide4/flakon.png' style={{position: 'absolute', width: 318, top: 65, left: 10}}/>
+					<img src='./icons/global/bottle.png' style={{position: 'absolute', width: 231, bottom: 0, left: 52, zIndex: 5}}/>
+
+					<img className='bubble1' src='./icons/global/bubble1.png' style={{position: 'absolute', width: 37, top: 65, left: 197, zIndex: 4}}/>
+					<img className='bubble2' src='./icons/global/bubble2.png' style={{position: 'absolute', width: 67, top: 155, left: 183, zIndex: 6}}/>
+					<img className='bubble3' src='./icons/global/bubble3.png' style={{position: 'absolute', width: 32, top: 212, left: 82, zIndex: 4}}/>
+					<img className='bubble4' src='./icons/global/bubble4.png' style={{position: 'absolute', width: 105, top: 325, left: 197, zIndex: 4}}/>
+					<img className='bubble5' src='./icons/global/bubble5.png' style={{position: 'absolute', width: 30, bottom: 284, left: 10, zIndex: 6}}/>
+					<img className='bubble6' src='./icons/global/bubble6.png' style={{position: 'absolute', width: 75, bottom: 140, left: 25, zIndex: 6}}/>
+					<img className='bubble7' src='./icons/global/bubble7.png' style={{position: 'absolute', width: 54, bottom: 120, left: 250, zIndex: 4}}/>
+					<img className='bubble8' src='./icons/global/bubble8.png' style={{position: 'absolute', width: 139, bottom: 0, left: 188, zIndex: 6}}/>
+
 					<img src="./icons/global/shape1.png" style={{position: 'absolute', width: 57, bottom: 13, left: 70}}/>
 				</div>
 
@@ -294,7 +317,17 @@ function App() {
 						</div>
 					</div>
 
-					<img src='./icons/slide4/flakon.png' style={{position: 'absolute', width: 318, top: 65, left: 10}}/>
+					<img src='./icons/global/bottle.png' style={{position: 'absolute', width: 231, bottom: 0, left: 52, zIndex: 5}}/>
+
+					<img className='bubble1' src='./icons/global/bubble1.png' style={{position: 'absolute', width: 37, top: 65, left: 197, zIndex: 4}}/>
+					<img className='bubble2' src='./icons/global/bubble2.png' style={{position: 'absolute', width: 67, top: 155, left: 183, zIndex: 6}}/>
+					<img className='bubble3' src='./icons/global/bubble3.png' style={{position: 'absolute', width: 32, top: 212, left: 82, zIndex: 4}}/>
+					<img className='bubble4' src='./icons/global/bubble4.png' style={{position: 'absolute', width: 105, top: 325, left: 197, zIndex: 4}}/>
+					<img className='bubble5' src='./icons/global/bubble5.png' style={{position: 'absolute', width: 30, bottom: 284, left: 10, zIndex: 6}}/>
+					<img className='bubble6' src='./icons/global/bubble6.png' style={{position: 'absolute', width: 75, bottom: 140, left: 25, zIndex: 6}}/>
+					<img className='bubble7' src='./icons/global/bubble7.png' style={{position: 'absolute', width: 54, bottom: 120, left: 250, zIndex: 4}}/>
+					<img className='bubble8' src='./icons/global/bubble8.png' style={{position: 'absolute', width: 139, bottom: 0, left: 188, zIndex: 6}}/>
+
 					<img src="./icons/global/shape1.png" style={{position: 'absolute', width: 57, bottom: 13, left: 70}}/>
 				</div>
 			</div>

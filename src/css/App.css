@@ -1,4 +1,4 @@
-@import url("./fonts/stylesheet.css");
+@import url("../fonts/stylesheet.css");
 
 html, body {
   	margin: 0;
@@ -48,31 +48,31 @@ html, body {
 
 .slide-1 {
 	position: relative;
-	background: url('../public/icons/slide1/bg1.png');
+	background: url('../../public/icons/slide1/bg1.png');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 .slide-2 {
 	position: relative;
-	background: url('../public/icons/slide2/bg2.png');
+	background: url('../../public/icons/slide2/bg2.png');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 .slide-3 {
 	position: relative;
-	background: url('../public/icons/slide3/bg3.png');
+	background: url('../../public/icons/slide3/bg3.png');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 .slide-4 {
 	position: relative;
-	background: url('../public/icons/slide4/fone2.png') ;
+	background: url('../../public/icons/slide4/fone2.png') ;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 .slide-5 {
 	position: relative;
-	background: url('../public/icons/slide4/fone2.png');
+	background: url('../../public/icons/slide4/fone2.png');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
