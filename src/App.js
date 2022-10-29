@@ -1,4 +1,4 @@
-import {createRef, useState, useEffect} from 'react'
+import {createRef, useState, useEffect} from 'react';
 import Slide1 from './components/Slide1';
 import Slide5 from './components/Slide5';
 import Slide4 from './components/Slide4';
@@ -7,19 +7,6 @@ import Slide2 from './components/Slide2';
 import './css/App.css';
 import './css/Animations.css'
 
-/* 
-	Todo:
-	сделано - Анимации перелистывания
-	сделано - Навигация по кнопкам на слайдах
-	сделано - Скроллбар на втором слайде
-	сделано- Подключить шрифт
-	сделано - Детализировать верстку
-	сделано - Запуск анимаций только при попадании на слайд
-	- Причесать код и внедрить postCSS
-	сделано - Написать комментарии к коду
-	сделано - Анимации картинок
-*/
-
 const App = () => {
 	const tape = createRef('tape'),
 		  slider = createRef('slider')
@@ -27,7 +14,9 @@ const App = () => {
 	const [touchPosition, setTouchPosition] = useState(null), // Position of start touch in tape swipes
 		  [offset, setOffset] = useState(0), // Offset of tape, need to moving tape and showing selected slide
 		  [classTape, setClassTape] = useState(`slideTape`), // This variable need to set some classes for tape
+
 		  // Variables need to set some classes for animation of pictures on second slide
+		  
 		  [classNameSperm1, setClassNameSperm1] = useState(`sperm1`),
 		  [classNameSperm2, setClassNameSperm2] = useState(''),
 		  [classNameSperm3, setClassNameSperm3] = useState(''),
