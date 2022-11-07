@@ -2,7 +2,7 @@ import '../css/Slide1.css'
 import Header from './Header'
 import Logo from './Logo'
 
-const Slide1 = ({ toSlide }) => {
+const Slide1 = ({ translateTape }) => {
 	return (
 		<div className='slide slide__1'>
 			<Header />
@@ -13,7 +13,7 @@ const Slide1 = ({ toSlide }) => {
 				ЭТО <span id='no'>НЕ</span> КОММЕРЧЕСКОЕ <span id='task'>ЗАДАНИЕ</span>
 			</div>
 
-			<button className='btn' onClick={() => toSlide(-1024)}>
+			<button className='btn' onClick={() => translateTape(-1024)}>
 				<div className='btn__arrow'>
 					<div className='arrow'>
 						<div className='arrow__line1'></div>

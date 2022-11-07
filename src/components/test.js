@@ -12,7 +12,7 @@ const App = () => {
 
 	const [touchPosition, setTouchPosition] = useState(null), // Position of start touch in tape swipes
 		[offset, setOffset] = useState(0), // Offset of tape, need to moving tape and showing selected slide
-		// [classTape, setClassTape] = useState(`slideTape`), // This variable need to set some classes for tape
+		[classTape, setClassTape] = useState(`slideTape`), // This variable need to set some classes for tape
 		// Variables need to set some classes for animation of pictures on second slide
 
 		[classNameSperm1, setClassNameSperm1] = useState(`sperm1`),
@@ -44,8 +44,6 @@ const App = () => {
 	const onTouchStart = e => {
 		const touchDown = e.touches[0].clientX // X coordinate - start of touch
 		setTouchPosition(touchDown)
-
-		setOffset(+tape.current.style.translate.slice(0, -2)) // watching the offset of tape and frees us from props drilling between components
 	}
 
 	const onTouchMove = e => {
@@ -54,45 +52,106 @@ const App = () => {
 		}
 
 		const currentPosition = e.touches[0].clientX // X coordinate - current position of touch
-		const direction = touchPosition - currentPosition // direction of swipe (next/prev)
+		const direction = touchPosition - currentPosition
 
-		// swipe next
+		let offs = offset
+
 		if (direction > 10) {
-			if (offset > -4096) {
-				// Add transition where it's need
-				if (offset === 0 || offset === -1024) {
-					tape.current.style.transition = '1s all'
-				} else {
-					tape.current.style.transition = ''
+			// Condition for next slide
+			if (offset - slider.current.offsetWidth >= -4096) {
+				// Limit of moving tape
+
+				offs = offset - slider.current.offsetWidth // Future position of tape
+
+				switch (offs) {
+					case -4096:
+						moveTapeWithoutAnim(offs)
+						break
+					case -3072:
+						moveTapeWithoutAnim(offs)
+						break
+					default:
+						moveTape(offs)
 				}
-				// Change slides
-				translateTape(offset - 1024)
-				setOffset(offset - 1024)
+				setOffset(offs)
 			}
 		}
-		// swipe prev
 		if (direction < -10) {
-			if (offset < 0) {
-				// Add transition where it's need
-				if (offset === -2048 || offset === -1024) {
-					tape.current.style.transition = '1s all'
-				} else {
-					tape.current.style.transition = ''
+			// Condition for previous slide
+			if (offset + slider.current.offsetWidth <= 0) {
+				// Limit of moving tape
+
+				offs = offset + slider.current.offsetWidth // Future position of tape
+
+				switch (offs) {
+					case -4096:
+						moveTapeWithoutAnim(offs)
+						break
+					case -3072:
+						moveTapeWithoutAnim(offs)
+						break
+					case -2048:
+						moveTapeWithoutAnim(offs)
+						break
+					default:
+						moveTape(offs)
 				}
-				// Change slides
-				translateTape(offset + 1024)
-				setOffset(offset + 1024)
+				setOffset(offs)
 			}
 		}
 		setTouchPosition(null)
 	}
 
-	const translateTape = value => {
-		// this condition needs for delete animation of swipe from third to fourth slide on button
-		if (offset && offset === -2048 && value === -3072) {
-			tape.current.style.transition = ''
+	// Functions for moving tape
+
+	const moveTape = offset => {
+		switch (offset) {
+			case 0:
+				setClassTape('slideTape firstSlide')
+				break
+			case -1024:
+				setClassTape('slideTape secondSlide')
+				break
+			case -2048:
+				setClassTape('slideTape thirdSlide')
+				break
+			case -3072:
+				setClassTape('slideTape fourthSlide')
+				break
+			case -4096:
+				setClassTape('slideTape fifthSlide')
+				break
 		}
-		tape.current.style.translate = `${value}px`
+	}
+
+	const moveTapeWithoutAnim = offset => {
+		switch (offset) {
+			case 0:
+				setClassTape('slideTape firstSlideWithoutAnim')
+				break
+			case -1024:
+				setClassTape('slideTape secondSlideWithoutAnim')
+				break
+			case -2048:
+				setClassTape('slideTape thirdSlideWithoutAnim')
+				break
+			case -3072:
+				setClassTape('slideTape fourthSlideWithoutAnim')
+				break
+			case -4096:
+				setClassTape('slideTape fifthSlideWithoutAnim')
+				break
+		}
+	}
+
+	const toSlide = value => {
+		moveTape(value)
+		setOffset(value)
+	}
+
+	const toSlideWithoutAnim = value => {
+		moveTapeWithoutAnim(value)
+		setOffset(value)
 	}
 
 	return (
@@ -102,19 +161,19 @@ const App = () => {
 			onTouchStart={onTouchStart}
 			onTouchMove={onTouchMove}
 		>
-			<div className='slideTape' ref={tape}>
-				<Slide1 translateTape={translateTape} />
+			<div className={classTape} ref={tape}>
+				<Slide1 toSlide={toSlide} />
 				<Slide2
-					translateTape={translateTape}
+					toSlide={toSlide}
 					classNameSperm1={classNameSperm1}
 					classNameSperm2={classNameSperm2}
 					classNameSperm3={classNameSperm3}
 					classNameSperm4={classNameSperm4}
 					classNameSperm5={classNameSperm5}
 				/>
-				<Slide3 translateTape={translateTape} />
+				<Slide3 toSlide={toSlide} toSlideWithoutAnim={toSlideWithoutAnim} />
 				<Slide4
-					translateTape={translateTape}
+					toSlideWithoutAnim={toSlideWithoutAnim}
 					data={{
 						numbers: ['01', '02', '03'],
 						txt: [
@@ -125,7 +184,7 @@ const App = () => {
 					}}
 				/>
 				<Slide4
-					translateTape={translateTape}
+					toSlideWithoutAnim={toSlideWithoutAnim}
 					data={{
 						numbers: ['04', '05', '06'],
 						txt: [
@@ -135,6 +194,7 @@ const App = () => {
 						slideNum: 5,
 					}}
 				/>
+				{/* <Slide5 toSlideWithoutAnim={toSlideWithoutAnim} /> */}
 			</div>
 		</div>
 	)

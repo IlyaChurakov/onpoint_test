@@ -53,7 +53,7 @@ const Slide2 = props => {
 
 	return (
 		<div className='slide slide__2'>
-			<Header funcToMove={props.toSlide} toSlide={0} />
+			<Header translateTape={props.translateTape} />
 			<div className='hello__text'>
 				ТЕКСТ <br /> СООБЩЕНИЯ
 			</div>

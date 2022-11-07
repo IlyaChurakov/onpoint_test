@@ -3,13 +3,13 @@ import Header from './Header'
 import Logo from './Logo'
 import Bottle from './Bottle'
 
-const Slide4 = ({ toSlideWithoutAnim, data }) => {
+const Slide4 = ({ translateTape, data }) => {
 	return (
 		<div className='slide slide__4'>
-			<Header funcToMove={toSlideWithoutAnim} toSlide={0} />
+			<Header translateTape={translateTape} />
 
 			<div className='board'>
-				<div className='board__close' onClick={() => toSlideWithoutAnim(-2048)}>
+				<div className='board__close' onClick={() => translateTape(-2048)}>
 					<div className='board__close_line1'></div>
 					<div className='board__close_line2'></div>
 				</div>
@@ -26,7 +26,11 @@ const Slide4 = ({ toSlideWithoutAnim, data }) => {
 					<li className='txt'>{data.txt[1]}</li>
 				</ul>
 				<div className='btns__wrapper'>
-					<img src='./icons/slide4/btn_left.png' alt='button' />
+					<img
+						src='./icons/slide4/btn_left.png'
+						alt='button'
+						onClick={() => translateTape(-3072)}
+					/>
 					<div className='circle__pink'></div>
 					{data.slideNum === 4 ? (
 						<div className='circle__empty'></div>
@@ -36,7 +40,7 @@ const Slide4 = ({ toSlideWithoutAnim, data }) => {
 					<img
 						src='./icons/slide4/btn_right.png'
 						alt='button'
-						onClick={() => toSlideWithoutAnim(-4096)}
+						onClick={() => translateTape(-4096)}
 					/>
 				</div>
 			</div>

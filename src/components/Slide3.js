@@ -3,10 +3,10 @@ import Header from './Header'
 import Logo from './Logo'
 import Bottle from './Bottle'
 
-const Slide3 = ({ toSlide, toSlideWithoutAnim }) => {
+const Slide3 = ({ translateTape }) => {
 	return (
 		<div className='slide slide__3'>
-			<Header funcToMove={toSlide} toSlide={0} />
+			<Header translateTape={translateTape} />
 
 			<div className='board__transparent'>
 				<div className='board__transparent_subtitle'>КЛЮЧЕВОЕ СООБЩЕНИЕ</div>
@@ -22,7 +22,7 @@ const Slide3 = ({ toSlide, toSlideWithoutAnim }) => {
 						lorem sed risus ultricies
 					</div>
 					<div className='small__board_in'>A arcu curvus vitae</div>
-					<button className='pinkBtn' onClick={() => toSlideWithoutAnim(-3072)}>
+					<button className='pinkBtn' onClick={() => translateTape(-3072)}>
 						<div className='blackBtn__in'>
 							<div className='plus'>
 								<div className='plus__line1'></div>
