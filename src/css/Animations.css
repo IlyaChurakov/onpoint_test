@@ -1,192 +1,62 @@
+/* Slide 1 */
 
 #hedgehog1 {
-	animation: hedgehog1  7s infinite ease;
+	animation: saturn 7s infinite linear;
 }
 #hedgehog2 {
-	animation: hedgehog2  15s infinite ease;
+	animation: close-far 13s infinite ease-in-out;
 }
 #ball1 {
-	animation: ball1  15s infinite ease;
+	animation: saturn 12s infinite ease;
 }
 #ball2 {
-	animation: ball2  15s infinite ease;
+	animation: saturn 10s infinite linear;
 }
+
+@keyframes saturn {
+	from {
+		transform: rotate(0deg) translateX(20px) rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg) translateX(20px) rotate(-360deg);
+	}
+}
+@keyframes close-far {
+	0% {
+		transform: scale(1) translateX(0);
+	}
+	33% {
+		transform: scale(1.1) translateX(-10px);
+	}
+	50% {
+		transform: scale(1) translateX(0px);
+	}
+	66% {
+		transform: scale(1.1) translateX(10px);
+	}
+	100% {
+		transform: scale(1) translateX(0);
+	}
+}
+
+/* Slide 2 */
+
 .sperm__anim1 {
 	animation: sperm1 3s ease;
 }
 .sperm__anim2 {
-	animation: sperm2  3s ease;
+	animation: sperm2 3s ease;
 }
 .sperm__anim3 {
-	animation: sperm3  3s ease;
+	animation: sperm3 3s ease;
 }
 .sperm__anim4 {
-	animation: sperm4  3s ease;
+	animation: sperm4 3s ease;
 }
 .sperm__anim5 {
-	animation: sperm5  3s ease;
-}
-.bubble1 {
-	animation: bubble1  15s infinite ease;
-}
-.bubble2 {
-	animation: bubble2  15s infinite ease;
-}
-.bubble3 {
-	animation: bubble3  15s infinite ease;
-}
-.bubble4 {
-	animation: bubble4  7s infinite ease;
-}
-.bubble5 {
-	animation: bubble5  7s infinite ease;
-}
-.bubble6 {
-	animation: bubble6  7s infinite ease;
-}
-.bubble7 {
-	animation: bubble7  7s infinite ease;
-}
-.bubble8 {
-	animation: bubble8  7s infinite ease;
-}
-.slide-anim {
-	animation: firstToSecond  2s ease;
+	animation: sperm5 3s ease;
 }
 
-@keyframes firstToSecond {
-	0% {
-		transform: translateX(0px);
-	}
-	100% {
-		transform: translateX(-1024px);
-	}
-}
-
-@keyframes hedgehog1 {
-	0% {
-		top: 200px;
-		left: 863px;
-	}
-	50% {
-		top: 210px;
-		left: 873px;
-	}
-	100% {
-		top: 200px;
-		left: 863px;
-	}
-}
-@keyframes hedgehog2 {
-	0% {
-		transform: scale(1.0);
-		left: 544px;
-	}
-	14% {
-		transform: scale(1.1);
-		left: 534px;
-	}
-	28% {
-		transform: scale(1.0);
-		left: 540px;
-	}
-	42% {
-		transform: scale(1.1);
-		left: 547px;
-	}
-	56% {
-		transform: scale(1.0);
-		left: 550px;
-	}
-	70% {
-		transform: scale(1.1);
-		left: 553px;
-	}
-	84% {
-		transform: scale(1.1);
-		left: 547px;
-	}
-	100% {
-		transform: scale(1.0);
-		left: 544px;
-	}
-}
-@keyframes ball1 {
-	0% {
-		top: 500px;
-		left: 25px;
-	}
-	14% {
-		top: 525px;
-		left: 50px;
-	}
-	28% {
-		top: 540px;
-		left: 60px;
-	}
-	42% {
-		top: 530px;
-		left: 70px;
-	}
-	56% {
-		top: 520px;
-		left: 60px;
-	}
-	70% {
-		top: 500px;
-		left: 40px;
-	}
-	84% {
-		top: 480px;
-		left: 30px;
-	}
-	100% {
-		top: 500px;
-		left: 25px;
-	}
-}
-@keyframes ball2 {
-	0% {
-		top: 61px;
-		left: 745px;
-	}
-	14% {
-		top: 71px;
-		left: 755px;
-	}
-	28% {
-		top: 76px;
-		left: 735px;
-	}
-	42% {
-		top: 65px;
-		left: 725px;
-	}
-	56% {
-		top: 50px;
-		left: 730px;
-	}
-	70% {
-		top: 48px;
-		left: 750px;
-	}
-	77% {
-		top: 55px;
-		left: 760px;
-	}
-	84% {
-		top: 65px;
-		left: 765px;
-	}
-	93% {
-		top: 68px;
-		left: 758px;
-	}
-	100% {
-		top: 61px;
-		left: 745px;
-	}
-}
 @keyframes sperm1 {
 	0% {
 		opacity: 0;
@@ -247,132 +117,81 @@
 		right: 0;
 	}
 }
+
+/* Other slides */
+
+.bubble1 {
+	animation: bubble1 10s infinite ease;
+}
+.bubble2 {
+	animation: bubble2 10s infinite ease;
+}
+.bubble3 {
+	animation: bubble3 13s infinite ease;
+}
+.bubble4 {
+	animation: bubble4 12s infinite ease;
+}
+.bubble5 {
+	animation: bubble5 7s infinite ease;
+}
+.bubble6 {
+	animation: bubble6 7s infinite ease;
+}
+.bubble7 {
+	animation: bubble7 7s infinite ease;
+}
+.bubble8 {
+	animation: bubble8 7s infinite ease;
+}
+.slide-anim {
+	animation: firstToSecond 2s ease;
+}
+
 @keyframes bubble1 {
-	0% {
-		left: 197px;
-		top: 65px;
+	from {
+		transform: rotate(0deg) translateX(10px) rotate(0deg);
 	}
-	14% {
-		left: 203px;
-		top: 63px;
-	}
-	28% {
-		left: 203px;
-		top: 57px;
-	}
-	42% {
-		left: 197px;
-		top: 55px;
-	}
-	56% {
-		left: 195px;
-		top: 57px;
-	}
-	70% {
-		left: 195px;
-		top: 59px;
-	}
-	84% {
-		left: 197px;
-		top: 62px;
-	}
-	100% {
-		left: 197px;
-		top: 65px;
+	to {
+		transform: rotate(360deg) translateX(10px) rotate(-360deg);
 	}
 }
 @keyframes bubble2 {
 	0% {
-		left: 183px;
-		top: 155px;
+		transform: rotate(0deg) translateX(10px) rotate(0deg) scale(1.3);
 	}
-	17% {
-		transform: scale(1.1);
-		left: 188px;
-		top: 150px;
-	}
-	34% {
-		left: 183px;
-		top: 155px;
-	}
-	51% {
-		transform: scale(1.1);
-		left: 178px;
-		top: 150px;
-	}
-	68% {
-		left: 183px;
-		top: 155px;
-	}
-	85% {
-		transform: scale(1.1);
-		left: 178px;
-		top: 160px;
+	50% {
+		transform: scale(1) rotate(180deg) translateX(20px) rotate(-180deg);
 	}
 	100% {
-		left: 183px;
-		top: 155px;
+		transform: rotate(360deg) translateX(10px) rotate(-360deg) scale(1.3);
 	}
 }
 @keyframes bubble3 {
 	0% {
-		left: 82px;
-		top: 212px;
-	}
-	17% {
-		left: 87px;
-		top: 207px;
-	}
-	34% {
-		transform: scale(1.1);
-		left: 82px;
-		top: 212px;
-	}
-	51% {
-		left: 77px;
-		top: 207px;
-	}
-	68% {
-		transform: scale(1.1);
-		left: 82px;
-		top: 212px;
-	}
-	85% {
-		left: 77px;
-		top: 217px;
+		transform: rotate(0deg) translateX(20px) rotate(0deg);
 	}
 	100% {
-		left: 82px;
-		top: 212px;
+		transform: rotate(360deg) translateX(20px) rotate(-360deg);
 	}
 }
 @keyframes bubble4 {
 	0% {
-		left: 197px;
-		top: 325px;
+		transform: rotate(0deg) translateX(10px) rotate(0deg) scale(1.3);
 	}
 	50% {
-		left: 207px;
-		top: 315px;
+		transform: scale(1) rotate(180deg) translateX(10px) rotate(-180deg);
 	}
 	100% {
-		left: 197px;
-		top: 325px;
+		transform: rotate(360deg) translateX(10px) rotate(-360deg) scale(1.3);
 	}
 }
 @keyframes bubble5 {
 	0% {
-		left: 10px;
-		bottom: 284px;
-	}
-	50% {
-		transform: scale(1.1);
-		left: 20px;
-		bottom: 275px;
+		transform: rotate(0deg) translateX(7px) rotate(0deg);
 	}
 	100% {
-		left: 10px;
-		bottom: 284px;
+		transform: rotate(-360deg) translateX(7px) rotate(360deg);
 	}
 }
 @keyframes bubble6 {
@@ -416,5 +235,14 @@
 	100% {
 		left: 188px;
 		bottom: 0px;
+	}
+}
+
+@keyframes firstToSecond {
+	0% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(-1024px);
 	}
 }

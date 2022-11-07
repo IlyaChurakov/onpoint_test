@@ -18,6 +18,16 @@ const Slide2 = props => {
 		setY(scrollbar.current.offsetTop) // Position of thumb in track
 	}
 
+	// Control classes of animations
+
+	let toggleClass = false
+
+	if (props.offset === -1024) {
+		toggleClass = true
+	} else {
+		toggleClass = false
+	}
+
 	const onTouchMoveScrollBar = e => {
 		if (touchPositionScrollbar === null) {
 			return
@@ -126,7 +136,7 @@ const Slide2 = props => {
 				facilisis felis.
 			</div>
 			<img
-				className={props.classNameSperm1}
+				className={toggleClass ? 'sperm__anim1' : ''}
 				src='./icons/slide2/sperm1.png'
 				style={{
 					position: 'absolute',
@@ -137,7 +147,7 @@ const Slide2 = props => {
 				alt='sperm'
 			/>
 			<img
-				className={props.classNameSperm2}
+				className={toggleClass ? 'sperm__anim2' : ''}
 				src='./icons/slide2/sperm2.png'
 				style={{
 					position: 'absolute',
@@ -148,7 +158,7 @@ const Slide2 = props => {
 				alt='sperm'
 			/>
 			<img
-				className={props.classNameSperm3}
+				className={toggleClass ? 'sperm__anim3' : ''}
 				src='./icons/slide2/sperm3.png'
 				style={{
 					position: 'absolute',
@@ -159,7 +169,7 @@ const Slide2 = props => {
 				alt='sperm'
 			/>
 			<img
-				className={props.classNameSperm4}
+				className={toggleClass ? 'sperm__anim4' : ''}
 				src='./icons/slide2/sperm4.png'
 				style={{
 					position: 'absolute',
@@ -170,7 +180,7 @@ const Slide2 = props => {
 				alt='sperm'
 			/>
 			<img
-				className={props.classNameSperm5}
+				className={toggleClass ? 'sperm__anim5' : ''}
 				src='./icons/slide2/sperm5.png'
 				style={{
 					position: 'absolute',

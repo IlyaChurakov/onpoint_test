@@ -1,4 +1,4 @@
-import { createRef, useState, useEffect } from 'react'
+import { createRef, useState } from 'react'
 import Slide1 from './components/Slide1'
 import Slide4 from './components/Slide4'
 import Slide3 from './components/Slide3'
@@ -11,33 +11,7 @@ const App = () => {
 		slider = createRef('slider')
 
 	const [touchPosition, setTouchPosition] = useState(null), // Position of start touch in tape swipes
-		[offset, setOffset] = useState(0), // Offset of tape, need to moving tape and showing selected slide
-		// [classTape, setClassTape] = useState(`slideTape`), // This variable need to set some classes for tape
-		// Variables need to set some classes for animation of pictures on second slide
-
-		[classNameSperm1, setClassNameSperm1] = useState(`sperm1`),
-		[classNameSperm2, setClassNameSperm2] = useState(''),
-		[classNameSperm3, setClassNameSperm3] = useState(''),
-		[classNameSperm4, setClassNameSperm4] = useState(''),
-		[classNameSperm5, setClassNameSperm5] = useState('')
-
-	// Control classes of animations on second slide
-
-	useEffect(() => {
-		if (offset === -1024) {
-			setClassNameSperm1('sperm1 sperm__anim1')
-			setClassNameSperm2('sperm__anim2')
-			setClassNameSperm3('sperm__anim3')
-			setClassNameSperm4('sperm__anim4')
-			setClassNameSperm5('sperm__anim5')
-		} else {
-			setClassNameSperm1(`sperm1`)
-			setClassNameSperm2('')
-			setClassNameSperm3('')
-			setClassNameSperm4('')
-			setClassNameSperm5('')
-		}
-	}, [offset])
+		[offset, setOffset] = useState(0) // Offset of tape, need to moving tape and showing selected slide
 
 	// Swipes
 
@@ -104,14 +78,7 @@ const App = () => {
 		>
 			<div className='slideTape' ref={tape}>
 				<Slide1 translateTape={translateTape} />
-				<Slide2
-					translateTape={translateTape}
-					classNameSperm1={classNameSperm1}
-					classNameSperm2={classNameSperm2}
-					classNameSperm3={classNameSperm3}
-					classNameSperm4={classNameSperm4}
-					classNameSperm5={classNameSperm5}
-				/>
+				<Slide2 translateTape={translateTape} offset={offset} />
 				<Slide3 translateTape={translateTape} />
 				<Slide4
 					translateTape={translateTape}
