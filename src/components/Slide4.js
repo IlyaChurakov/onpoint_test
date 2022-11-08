@@ -46,7 +46,6 @@ const Slide4 = ({ translateTape, data }) => {
 			</div>
 
 			<Bottle />
-
 			<Logo />
 		</div>
 	)

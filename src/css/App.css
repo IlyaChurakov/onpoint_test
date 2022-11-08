@@ -1,7 +1,8 @@
-@import url("../fonts/stylesheet.css");
+@import url('../fonts/stylesheet.css');
 
-html, body {
-  	margin: 0;
+html,
+body {
+	margin: 0;
 }
 * {
 	font-family: 'Gilroy-Thin';
@@ -69,41 +70,3 @@ html, body {
 	transform: rotate(-45deg) translate(2px, 32.5px);
 	border-radius: 1px;
 }
-.firstSlide {
-	transition: 1s all;
-	transform: translateX(0);
-}
-.secondSlide {
-	transition: 1s all;
-	transform: translateX(-1024px);
-}
-.thirdSlide {
-	transition: 1s all;
-	transform: translateX(-2048px);
-}
-.fourthSlide {
-	transition: 1s all;
-	transform: translateX(-3072px);
-}
-.fifthSlide {
-	transition: 1s all;
-	transform: translateX(-4096px);
-}
-.firstSlideWithoutAnim {
-	transform: translateX(0);
-}
-.secondSlideWithoutAnim {
-	transform: translateX(-1024px);
-}
-.thirdSlideWithoutAnim {
-	transform: translateX(-2048px);
-}
-.fourthSlideWithoutAnim {
-	transform: translateX(-3072px);
-}
-.fifthSlideWithoutAnim {
-	transform: translateX(-4096px);
-}
-
-
-

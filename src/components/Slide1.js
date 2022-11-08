@@ -5,7 +5,7 @@ import Logo from './Logo'
 const Slide1 = ({ translateTape }) => {
 	return (
 		<div className='slide slide__1'>
-			<Header />
+			<Header translateTape={translateTape} />
 
 			<div className='hello__text'>ПРИВЕТ,</div>
 

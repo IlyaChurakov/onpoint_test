@@ -35,7 +35,6 @@ const Slide3 = ({ translateTape }) => {
 			</div>
 
 			<Bottle />
-
 			<Logo />
 		</div>
 	)

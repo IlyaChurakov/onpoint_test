@@ -190,6 +190,7 @@ const Slide2 = props => {
 				}}
 				alt='sperm'
 			/>
+
 			<Logo />
 
 			<div
