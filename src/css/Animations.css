@@ -142,7 +142,7 @@
 	animation: bubble7 7s infinite ease;
 }
 .bubble8 {
-	animation: bubble8 7s infinite ease;
+	animation: bubble8 10s infinite ease-in-out;
 }
 .slide-anim {
 	animation: firstToSecond 2s ease;
@@ -196,45 +196,32 @@
 }
 @keyframes bubble6 {
 	0% {
-		left: 25px;
-		bottom: 140px;
+		transform: rotate(0deg) translateX(0px) rotate(0deg) scale(1.2);
 	}
 	50% {
-		transform: scale(1.1);
-		left: 15px;
-		bottom: 130px;
+		transform: scale(1) rotate(180deg) translateX(-20px) rotate(-180deg);
 	}
 	100% {
-		left: 25px;
-		bottom: 140px;
+		transform: rotate(-360deg) translateX(0px) rotate(360deg) scale(1.2);
 	}
 }
 @keyframes bubble7 {
 	0% {
-		left: 250px;
-		bottom: 120px;
-	}
-	50% {
-		left: 240px;
-		bottom: 130px;
+		transform: rotate(0deg) translateX(7px) rotate(0deg);
 	}
 	100% {
-		left: 250px;
-		bottom: 120px;
+		transform: rotate(-360deg) translateX(7px) rotate(360deg);
 	}
 }
 @keyframes bubble8 {
 	0% {
-		left: 188px;
-		bottom: 0px;
+		transform: rotate(0deg) translateX(0px) rotate(0deg) scale(1.2);
 	}
 	50% {
-		left: 188px;
-		bottom: -10px;
+		transform: scale(1) rotate(180deg) translateX(-20px) rotate(-180deg);
 	}
 	100% {
-		left: 188px;
-		bottom: 0px;
+		transform: rotate(-360deg) translateX(0px) rotate(360deg) scale(1.2);
 	}
 }
 
